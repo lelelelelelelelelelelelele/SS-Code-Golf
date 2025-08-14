@@ -1,0 +1,52 @@
+uvicorn main:app --reload
+
+# FastAPI + Vue 数据可视化项目
+
+这是一个将 Streamlit 应用重构为 FastAPI 后端和 Vue 前端的项目。
+
+## 项目结构
+
+- `backend/`: 存放所有 Python FastAPI 相关代码。
+- `frontend/`: 存放所有 Vue.js 相关代码。
+
+## 环境准备
+
+### 后端
+
+1.  需要 Python 3.7+。
+2.  在 `backend` 目录下，创建一个虚拟环境 (推荐):
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # on Windows use `venv\Scripts\activate`
+    ```
+3.  安装依赖:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+### 前端
+
+1.  需要 Node.js (https://nodejs.org/)。
+2.  在 `frontend` 目录下，安装依赖:
+    ```bash
+    npm install
+    ```
+
+## 运行项目
+
+你需要**同时打开两个终端**来分别运行后端和前端。
+
+1.  **运行后端服务**:
+    - 在 `backend` 目录下运行:
+    ```bash
+    uvicorn main:app --reload
+    ```
+    - 服务会启动在 `http://127.0.0.1:8000`。
+
+2.  **运行前端开发服务**:
+    - 在 `frontend` 目录下运行:
+    ```bash
+    npm run dev
+    ```
+    - 你的应用会启动在 `http://localhost:5173` (或提示的其他端口)。
+    - 在浏览器中打开这个地址即可看到界面。
